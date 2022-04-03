@@ -12,15 +12,22 @@ console.log(word.length);
 
 const fruit = "Banaan";
 const vegetable = "Aardappel";
+const isLonger = fruit.length > vegetable.length;
 
-
+console.log(isLonger)
 
 /* Opdracht 2 */
 //  Zorg ervoor dat de laatste letter van het woord in fruit en vegetable (hierboven) in de terminal gelogd wordt.
 //  Tip: bedenk 1 manier die voor beide woorden zou werken.
 // ---- Verwachte uitkomst voor fruit: "n"
 // ---- Verwachte uitkomst voor vegetable: "l"
+function lastLetter(woord){
+    const lengthOfWord = woord.length - 1
+    return woord.charAt(lengthOfWord)
+}
 
+console.log(lastLetter(fruit))
+console.log(lastLetter((vegetable)))
 
 
 /* Opdracht 3 */
@@ -28,14 +35,15 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst: "De kat krabt de krullen van de trap"
 
 const userInput = "  De kat krabt de krullen van de trap ";
-
+console.log(userInput.trim())
 
 
 /* Opdracht 4 */
 // Check of het woord "Fantastisch" in onderstaande zin voorkomt en log dit in de terminal.
 // ---- Verwachte uitkomst: true
 
-const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
+let story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
+console.log(story.includes("Fantastisch"))
 
 
 
@@ -43,6 +51,9 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 // Knip de vraag van bovenstaande tekst (story) af, zodat alleen het eerste gedeelte overblijft en log dit in de terminal.
 // ---- Verwachte uitkomst: "We vinden de behaalde resultaten werkelijk prachtig."
 
+const korterVerhaal = story.substring(0, story.indexOf("F") - 1)
+
+console.log(korterVerhaal)
 
 
 /* Opdracht 6 */
@@ -53,6 +64,9 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 // ---- Verwachte uitkomst: "€35,59"
 
 const price = "$35.59";
+const replaceTheDollar = price.replace("$", "€")
+const replaceTheDot = replaceTheDollar.replace(".", ",")
+console.log(replaceTheDot)
 
 
 
